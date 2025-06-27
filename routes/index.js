@@ -21,11 +21,10 @@ router.get('/dashboard', ensureAuth, async (req, res) => {
         res.render('dashboard', {
         name: req.user.firstName,
         stories,
-    });
-    } catch (err) {
+    })} catch (err) {
         console.error(err);
+        // res.render('error/500');
     }
-
 })
 
 
