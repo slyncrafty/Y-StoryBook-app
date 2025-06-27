@@ -1,3 +1,4 @@
+// Middleware - functions that has access to req and res objects
 module.exports = {
     ensureAuth: function (req, res, next) {
         if (req.isAuthenticated()) {
