@@ -1,33 +1,45 @@
 # Y-StoryBook-App
 
-This is a full application build of the Y-StoryBook app. User can login, view, save story posts and make them private or public as desired.
+This is a full application build of the Y-StoryBook app. User can login, view, save story posts and make them private or public as desired. Users can add new stories, edit them, and delete.
 
-**Link to project:** http://recruiters-love-seeing-live-demos.com/
-
-![alt tag](http://placecorgi.com/1200/650)
+![App demo](https://github.com/slyncrafty/slyncrafty.github.io/blob/main/images/demo2.gif?raw=true)
 
 ## How It's Made:
 
 **Tech used:** Node.js, Express, MongoDB, Passport with a Google OAuth strategy, Handlebars and more.
 
-Here's where you can go to town on how you actually built this thing. Write as much as you can here, it's totally fine if it's not too much just make sure you write _something_. If you don't have too much experience on your resume working on the front end that's totally fine. This is where you can really show off your passion and make up for that ten fold.
+This application was built using a modern web development stack. Node.js with Express provides a robust server framework for handling model, view, routes, middleware, and authentication. MongoDB stores uer profiles and the story data with mongoose to define schemas. Handlebars is used as view engine for dynamic, server-rendered HTML templates, supporting layouts and partials.
+The UI utilizes Materialize for modern and responsive styling leveraging prebuilt components and a clean and organized look.
 
-## Optimizations
+## How to use:
 
-_(optional)_
+Add your MongoDB URI and Google OAuth ID and Secret to /config/config.env file -- `DB_STRING`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`
 
-You don't have to include this section but interviewers _love_ that you can not only deliver a final product that looks great but also functions efficiently. Did you write something then refactor it later and the result was 5x faster than the original implementation? Did you cache your assets? Things that you write in this section are **GREAT** to bring up in interviews and you can use this section as reference when studying for technical interviews!
+```
+# Install npm dependencies
+npm install
+
+# Run in development mode
+npm run dev
+
+# Run in production mode
+npm start
+```
 
 ## Lessons Learned:
 
-No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those _whoa this is awesome_ or _wow I actually did it!_ moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
+- Google OAuth integration: learned how to securely handle third-party authentication, manage user sessions, and persist user data.
+- Private/public access control: learned building private/public story access to restrict visibility and editing of the content to the authorized user.
+- RESTful design: learned routing for CRUD operations following REST principles improved clarity and maintainability fo the server-side code.
+- Template Engines: learned using Handlebars rendering, partials, and dynamic data binding in views(HTML).
+- Middlewares: learned how middleware can modularize logic for authentication, data formatting, and parsing requests.
 
 ## Examples:
 
-Take a look at these couple examples that I have in my own portfolio:
+Take a look at these couple examples that I have in my portfolio:
 
-**Palettable:** https://github.com/alecortega/palettable
+**Pomodoro Timer:** https://github.com/slyncrafty/pomodoro-timer
 
-**Twitter Battle:** https://github.com/alecortega/twitter-battle
+**Portfolio:** https://slyncrafty.github.io/
 
-**Patch Panel:** https://github.com/alecortega/patch-panel
+**DND World Building ToolBox** https://github.com/slyncrafty/api-dnd_World_building_toolbox?tab=readme-ov-file
